@@ -23,6 +23,7 @@ rawan_adel.net_portfolio/
 │   ├── projects.html
 │   ├── achievements.html
 │   ├── education.html
+│   ├── certificates.html
 │   ├── volunteering.html
 │   └── footer.html
 ├── assets/favicon.svg  # monogram favicon
@@ -63,7 +64,7 @@ rawan_adel.net_portfolio/
    Achievements, Volunteering, Education, Footer. Reuse existing copy as
    placeholders.
 4. **Interactivity** (`js/main.js`) — mobile nav toggle, dark mode toggle
-   (persisted to localStorage, respects `prefers-color-scheme`), scroll
+   (persisted to localStorage, defaults to light), scroll
    reveal via IntersectionObserver, scrollspy for active nav highlighting,
    smooth scroll with `scroll-padding-top` for the fixed header.
 5. **Accessibility** — skip link, focus-visible rings, aria labels on icon

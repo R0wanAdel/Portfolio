@@ -14,7 +14,7 @@
     (function () {
       var stored = null;
       try { stored = localStorage.getItem('theme'); } catch (e) {}
-      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var theme = stored || 'light';
       document.documentElement.dataset.theme = theme;
     })();
   </script>
@@ -31,6 +31,7 @@
     <div id="partial-projects"></div>
     <div id="partial-achievements"></div>
     <div id="partial-education"></div>
+    <div id="partial-certificates"></div>
     <div id="partial-volunteering"></div>
   </main>
 

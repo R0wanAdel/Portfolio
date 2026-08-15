@@ -1,8 +1,7 @@
 (function () {
   'use strict';
 
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  var partials = ['nav', 'hero', 'experience', 'skills', 'projects', 'achievements', 'education', 'volunteering', 'footer'];
+  var partials = ['nav', 'hero', 'experience', 'skills', 'projects', 'achievements', 'education', 'certificates', 'volunteering', 'footer'];
   var remaining = partials.length;
 
   function setTheme(theme) {
@@ -10,14 +9,6 @@
     try {
       localStorage.setItem('theme', theme);
     } catch (e) {}
-  }
-
-  function getStoredTheme() {
-    try {
-      return localStorage.getItem('theme');
-    } catch (e) {
-      return null;
-    }
   }
 
   function bindNav() {
@@ -128,12 +119,6 @@
     bindReveal();
     bindScrollspy();
   }
-
-  prefersDark.addEventListener('change', function (e) {
-    if (!getStoredTheme()) {
-      setTheme(e.matches ? 'dark' : 'light');
-    }
-  });
 
   partials.forEach(function (name) {
     var host = document.getElementById('partial-' + name);
